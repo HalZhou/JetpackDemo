@@ -21,6 +21,8 @@ okhttpBom = "4.12.0"
 appcompat = "1.6.1"
 material = "1.10.0"
 androidxLintGradle = "1.0.0-alpha03"
+kotlinSerializationJson = "1.8.0"
+adaptiveAndroid = "1.0.0"
 
 
 [libraries]
@@ -58,6 +60,7 @@ okhttp-bom = { group = "com.squareup.okhttp3", name = "okhttp-bom", version.ref 
 okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+kotlinx-serialization-json = {group = "org.jetbrains.kotlinx",name = "kotlinx-serialization-json",version.ref = "kotlinSerializationJson"}
 
 
 # Dependencies of the included build-logic
@@ -69,6 +72,7 @@ compose-gradlePlugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "roomVersion" }
+androidx-adaptive-android = { group = "androidx.compose.material3.adaptive", name = "adaptive-android", version.ref = "adaptiveAndroid" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -81,6 +85,7 @@ hilt-android-gradle-plugin = { id = "com.google.dagger.hilt.android", version.re
 ksp-plugin = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 room-plugin = { id = "androidx.room", version.ref = "roomVersion" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-serialization = {id = "org.jetbrains.kotlin.plugin.serialization",version.ref = "kotlin"}
 
 
 # custom plugins

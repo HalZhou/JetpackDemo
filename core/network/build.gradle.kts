@@ -18,12 +18,13 @@ android {
 
 dependencies {
     api(libs.retrofit)
-    implementation(libs.retrofit.converter.gson)
+    api(libs.retrofit.converter.gson)
     implementation(platform(libs.okhttp.bom))
     implementation(libs.okhttp.logging.interceptor)
 
     implementation(libs.hilt.android)
     implementation(project(":core:database"))
+    implementation(project(":core:common"))
     ksp(libs.hilt.compiler)
 
     api(libs.kotlinx.coroutines.android)

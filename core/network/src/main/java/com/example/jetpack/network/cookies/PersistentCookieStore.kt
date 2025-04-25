@@ -25,6 +25,7 @@ class PersistentCookieStore @Inject constructor(private val dao: CookieDao) : Co
         coroutineScope.launch {
             val temp = getAllCookiesFromDatabase()
             for (cookie in temp) {
+                if (cookie.value.isEmpty()) continue
                 if (cookie.isExpiredAt()) {
                     deleteCookiesFromDatabase(listOf(cookie))
                 } else {
